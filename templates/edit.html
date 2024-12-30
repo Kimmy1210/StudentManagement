@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>编辑学生信息</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">姓名</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ student[1] }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">年龄</label>
+        <input type="number" class="form-control" id="age" name="age" value="{{ student[2] }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="grade" class="form-label">年级</label>
+        <input type="text" class="form-control" id="grade" name="grade" value="{{ student[3] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">保存</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">返回</a>
+</form>
+{% endblock %} 
